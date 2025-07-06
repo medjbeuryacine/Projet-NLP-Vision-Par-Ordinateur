@@ -14,8 +14,8 @@ python-dotenv==1.0.0
 pydantic==2.11.7
 fastapi-cors==0.0.6
 pydantic[email]==2.11.7
-torch==2.0.1+cpu
-torchvision==0.15.2+cpu
+torch==2.0.1
+torchvision==0.15.2
 googletrans==4.0.0rc1
 emoji==2.8.0
 
