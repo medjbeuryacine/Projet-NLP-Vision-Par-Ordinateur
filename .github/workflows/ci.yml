@@ -30,22 +30,22 @@ jobs:
         echo "Building frontend..."
         docker build -t nlp-frontend ./frontend
     
-    - name: 🧪 Test application with docker-compose
+    - name: 🧪 Test application with docker compose
       run: |
         echo "Starting application..."
-        docker-compose up -d
+        docker compose up --buils -d
         
         echo "Waiting for services to be ready..."
         sleep 45
         
         echo "Checking services status..."
-        docker-compose ps
+        docker compose ps
         
         echo "Testing backend health..."
-        docker-compose exec -T backend curl -f http://localhost:8000 || echo "Backend not ready yet"
+        docker compose exec -T backend curl -f http://localhost:8000 || echo "Backend not ready yet"
         
         echo "Stopping services..."
-        docker-compose down
+        docker compose down
     
     - name: ✅ Success!
       run: |
