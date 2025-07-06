@@ -66,25 +66,29 @@ Accédez à l'interface MongoDB sur http://localhost:8081 et créez :
   - `Models_IA`
 
 ### 2. Créer un utilisateur
-Utilisez la route POST `/users/register` pour créer votre premier utilisateur :
+Utilisez la route POST `/users/create` pour créer votre premier utilisateur :
 
 ```json
 {
-  "username": "votre_nom_utilisateur",
-  "email": "votre_email@example.com",
-  "password": "votre_mot_de_passe"
+  "nom": "string",
+  "prenom": "string",
+  "username": "string",
+  "email": "user@example.com",
+  "password": "string"
 }
 ```
 
 **Exemple avec curl** :
 ```bash
-curl -X POST "http://localhost:8000/users/register" \
+curl -X POST "http://localhost:8000/users/create" \
   -H "Content-Type: application/json" \
   -d '{
-    "username": "admin",
-    "email": "admin@example.com",
-    "password": "admin123"
-  }'
+  "nom": "admin",
+  "prenom": "admin",
+  "username": "admin",
+  "email": "admin@example.com",
+  "password": "admin"
+}'
 ```
 
 ### 3. Connexion
@@ -177,11 +181,10 @@ Le projet utilise des modèles PyTorch pré-entraînés stockés dans `backend/m
 ```
 
 ### API Endpoints Principaux
-- `POST /users/register` : Inscription utilisateur
+- `POST /users/create` : Inscription utilisateur
 - `POST /users/login` : Connexion utilisateur
-- `POST /models/analyze` : Analyse de modèle
-- `GET /models/results` : Récupération des résultats
-- `POST /predict` : Prédictions en temps réel
+- `GET /model_info` : Récupération les information de model 
+- `POST /generate_caption` : Prédictions en temps réel
 
 ## Sécurité
 
