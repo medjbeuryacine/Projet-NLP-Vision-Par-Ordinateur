@@ -46,7 +46,7 @@ cd Projet-NLP-Vision-Par-Ordinateur
 
 ### 2. Lancer l'application
 ```bash
-docker-compose up -d
+docker-compose up --build -d
 ```
 
 ### 3. Accès aux services
