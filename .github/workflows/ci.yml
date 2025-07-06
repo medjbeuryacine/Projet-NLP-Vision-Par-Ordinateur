@@ -30,7 +30,7 @@ jobs:
     - name: 🏗️ Build backend image
       run: |
         echo "Building backend..."
-        docker build -t nlp-backend ./backend
+        docker build --no-cache -t nlp-backend ./backend
     
     - name: 🏗️ Build frontend image
       run: |
