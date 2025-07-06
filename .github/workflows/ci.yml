@@ -33,7 +33,7 @@ jobs:
     - name: 🧪 Test application with docker compose
       run: |
         echo "Starting application..."
-        docker compose up --buils -d
+        docker compose up --build -d
         
         echo "Waiting for services to be ready..."
         sleep 45
