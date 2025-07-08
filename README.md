@@ -2,7 +2,7 @@
 
 Une application web full-stack pour l'analyse et la prédiction de modèles d'intelligence artificielle combinant traitement du langage naturel (NLP) et vision par ordinateur.
 
-## Architecture du Projet
+## Architecture du Projet 
 
 ### Backend (FastAPI)
 - **Framework** : FastAPI avec Python
